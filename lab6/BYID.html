@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="./script.js"></script>
+  <body>
+    <div>
+      <h1 id="text">Change Text</h1>
+      <button onclick="onHand()">Click</button>
+      <button onclick="onReset()">Reset</button><br /><br />
+    </div>
+    <div>
+        <h1 id="color">Change Text Color</h1>
+        <button onclick="onRed()">Red</button>
+        <button onclick="onGreen()">Green</button><br /><br />
+      </div>
+      <div>
+        <h1 id="element">Element Hide</h1>
+        <button onclick="onHide()">Hide</button>
+        <button onclick="onShow()">Show</button><br /><br />
+      </div>
+      <div>
+        <img id="img" src="./5.jpg" width="100px" height="100px" alt="img"><br>
+        <button onclick="onImg()">Change</button>
+        <button onclick="onImgReset()">Reset</button>
+      </div>
+
+    <!-- <button onclick="onHand()">Handling a Click Events</button><br><br> -->
+    <!-- <a href="#">Question 1</a><br><br> -->
+    <!-- <a href="#">Question 1</a><br><br> -->
+    <!-- <a href="#">Question 1</a> -->
+    <script>
+      function onReset() {
+        document.getElementById("text").innerText = "Reset";
+      }
+      function onGreen(){
+        document.getElementById("color").style.color = "Green"
+      }
+      function onShow() {
+        document.getElementById("element").style.display = "block"
+      }
+      function onImgReset() {
+        document.getElementById("img").src = "./5.jpg"
+      }
+    </script>
+  </body>
+</html>

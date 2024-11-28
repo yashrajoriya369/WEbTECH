@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function alertBtn() {
+        alert("Button was Clicked !");
+      }
+      function question1() {
+        alert("You are on Question 1.");
+      }
+      function question2() {
+        document.getElementById("question2").style.backgroundColor = "green";
+      }
+      function questionAdd2() {
+        document.getElementById("question2").style.backgroundColor = "red";
+      }
+      function question3() {
+        alert("You Pressed: ", event.key);
+      }
+      function question4() {
+        const data = document.getElementById("question4");
+        data.innerText = "Changed";
+      }
+      function question5(event) {
+        event.preventDefault();
+        alert("Form Submitted Successfully!");
+      }
+      function question6() {
+        document.getElementById("question6").style.backgroundColor = "green";
+      }
+      function question7() {
+        alert("State is Changed !");
+      }
+      function question8() {
+        if (window.innerWidth < 1000) {
+          alert("Don't compress too much!");
+        }
+      }
+      function question9() {
+        console.log("Scrollable");
+      }
+      function onFocus() {
+        document.getElementById("question10").style.backgroundColor = "red";
+      }
+      function onBlur() {
+        document.getElementById("question10").style.backgroundColor = "yellow";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Handling a Click Event</h1>
+    <button onclick="alertBtn()">Click</button><br />
+    <div>
+      <h2>Using addEventListener</h2>
+      <details>
+        <summary><h4>Question 1</h4></summary>
+        <button id="question1">Click</button>
+      </details>
+      <details>
+        <summary><h4>Question 2</h4></summary>
+        <div
+          id="question2"
+          style="width: 100px; height: 100px; background-color: red"
+        ></div>
+      </details>
+      <details>
+        <summary><h4>Question 3</h4></summary>
+        <input type="text" placeholder="Type something..." />
+      </details>
+      <details>
+        <summary><h4>Question 4</h4></summary>
+        <button id="question4">Click</button>
+      </details>
+      <details>
+        <summary><h4>Question 5</h4></summary>
+        <form id="question5">
+          <label> Name</label>
+          <input type="text" name="name" placeholder="Name" required />
+          <button type="submit">Click</button>
+        </form>
+      </details>
+      <details>
+        <summary><h4>Question 6</h4></summary>
+        <div
+          id="question6"
+          draggable="true"
+          style="width: 100px; height: 100px; background-color: red"
+        ></div>
+      </details>
+      <details>
+        <summary><h4>Question 7</h4></summary>
+        <input id="question7" type="checkbox" />Checked
+      </details>
+      <details>
+        <summary><h4>Question 8</h4></summary>
+      </details>
+      <details>
+        <summary><h4>Question 9</h4></summary>
+      </details>
+      <details>
+        <summary><h4>Question 10</h4></summary>
+        <div
+          id="question10"
+          tabindex="0"
+          style="width: 100px; height: 100px; background-color: yellow"
+        ></div>
+      </details>
+    </div>
+    <script>
+      document.getElementById("question1").addEventListener("click", question1);
+      document
+        .getElementById("question2")
+        .addEventListener("mouseover", question2);
+      document
+        .getElementById("question2")
+        .addEventListener("mouseout", questionAdd2);
+      document.addEventListener("keydown", question3);
+      // document.getElementById("question3").addEventListener('', question3)
+      document
+        .getElementById("question4")
+        .addEventListener("dblclick", question4);
+      document
+        .getElementById("question5")
+        .addEventListener("submit", question5);
+      document
+        .getElementById("question6")
+        .addEventListener("dragstart", question6);
+      document
+        .getElementById("question7")
+        .addEventListener("change", question7);
+      window.addEventListener("resize", question8);
+      window.addEventListener("scroll", question9);
+      const question_10 = document.getElementById("question10");
+      question_10.addEventListener("focus", onFocus);
+      question_10.addEventListener("bluer", onBlur);
+    </script>
+  </body>
+</html>

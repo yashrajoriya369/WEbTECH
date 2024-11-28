@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="xml" href="./hello.xml" />
+  </head>
+  <body>
+    <script>
+      // IIFE = Immediately Invoked Function Expression
+      (() => {
+        console.log("DB Connected Succesfully");
+      })();
+
+      const user = [
+        { name: "yash", price: 199 },
+        { name: "rohan", price: 399 },
+        { name: "navdeep", price: 100 },
+      ];
+
+      // Reduce Funtion
+      let initalValue = 0;
+      const finalValue = user.reduce((acc, item) => acc + item.price, 0);
+      console.log(finalValue);
+    </script>
+    <!-- <h1>Hello World</h1>
+    <button type="button" onclick="run()">Click</button>
+    <p id="text"></p>
+    <script>
+      function run() {
+        let data = new XMLHttpRequest();
+        data.open("GET", "about.html");
+
+        data.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("text").innerHTML = this.responseText;
+          }
+        };
+        data.send();
+      }
+    </script> -->
+  </body>
+</html>

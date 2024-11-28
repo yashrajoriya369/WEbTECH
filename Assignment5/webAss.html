@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Tech Assignment</title>
+  </head>
+  <body>
+    <script>
+      function que1() {
+        function fibonacci(num) {
+          if (num < 2) {
+            return num;
+          } else {
+            return fibonacci(num - 1) + fibonacci(num - 2);
+          }
+        }
+
+        const number = prompt("Enter the number: ");
+        if (number <= 0) {
+          console.log("Enter a positive number.");
+        } else {
+          for (let i = 0; i < number; i++) {
+            console.log(fibonacci(i));
+          }
+        }
+      }
+      function que2() {
+        const number2 = prompt("Enter the number: ");
+        let sum = 0;
+        for (let i = 0; i <= number2; i++) {
+          console.log(i);
+          sum += i;
+        }
+        console.log(`Sum of all Natural Number from 1 to ${number2} is :`, sum);
+      }
+      function que3() {
+        let sum = 0;
+        const number = prompt("Enter a positive integer: ");
+
+        let temp = number;
+        while (temp > 0) {
+          let remainder = temp % 10;
+
+          sum += remainder * remainder * remainder;
+
+          temp = parseInt(temp / 10);
+        }
+        console.log(temp);
+        if (sum == number) {
+          console.log(`${number} is an Armstrong number`);
+        } else {
+          console.log(`${number} is not an Armstrong number.`);
+        }
+      }
+      function que4() {
+        const num = prompt("Enter a number :");
+        let str = num.toString();
+        let reversedStr = str.split("").reverse().join("");
+        return console.log(str === reversedStr);
+      }
+
+      function que5() {
+        const n = prompt("Enter a number :")
+        for (let num = 2; num <= n; num++) {
+          if (isPrime(num)) {
+            console.log(num);
+          }
+        }
+      }
+
+      function isPrime(num) {
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return num > 1;
+      }
+    </script>
+    <button onclick="que1()">Print Fiboncacci Series</button><br />
+    <br />
+    <button onclick="que2()">Sum of N Natural Numbers</button><br /><br />
+    <button onclick="que3()">Number is Armstrong or Not</button>
+    <br /><br />
+    <button onclick="que4()">The No. is not Palindrome or Not</button
+    ><br /><br />
+    <button onclick="que5()">Print series of Prime Number</button>
+  </body>
+</html>

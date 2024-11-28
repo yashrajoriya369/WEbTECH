@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography Portfolio</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .gallery {
+        display: flex;
+        gap: 20px;
+      }
+      .gallery-item {
+        flex-basis: 30%;
+        text-align: center;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      .caption {
+        margin-top: 10px;
+        font-size: 1.1em;
+        color: #34495e;
+      }
+      .details-link {
+        display: inline-block;
+        margin-top: 5px;
+        text-decoration: none;
+        color: #2980b9;
+      }
+      .details-link:hover {
+        text-decoration: underline;
+      }
+      .defaultStateBtn{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading" align="center">Experiment 7</h1>
+    <button 
+    class="btn1"
+      onclick="changeColor()"
+      style="
+        width: 200px;
+        border: 1px solid black;
+        text-align: center;
+        margin: 5px 250px 5px;
+      "
+    >
+      Click Me to Change the color !
+    </button>
+    <button
+    class="defaultStateBtn btn2"
+      onclick="defaultColor()"
+      style="
+        width: 200px;
+        border: 1px solid black;
+        text-align: center;
+        margin: 5px 250px 5px;
+        display: none;
+      "
+    >
+      Default State!
+    </button>
+    <hr />
+    <h2>Photography Portfolio</h2>
+
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="./img/1.webp" alt="Mountain Landscape" />
+        <div class="caption">Mountain Landscape</div>
+        <a href="details1.html" class="details-link">View Details</a>
+      </div>
+
+      <div class="gallery-item">
+        <img src="./img/1.webp" alt="City at Night" />
+        <div class="caption">City at Night</div>
+        <a href="details2.html" class="details-link">View Details</a>
+      </div>
+
+      <div class="gallery-item">
+        <img src="./img/1.webp" alt="Forest Path" />
+        <div class="caption">Forest Path</div>
+        <a href="details3.html" class="details-link">View Details</a>
+      </div>
+    </section>
+    <script>
+      function changeColor() {
+        document.querySelector("h1").innerHTML= "Experiment 7";
+        document.querySelector("h1").style.color= "red";
+        document.querySelector(".btn1").style.display = "none";
+        document.querySelector(".btn2").style.display="block";
+      }
+      function defaultColor() {
+        document.querySelector("h1").innerHTML= "Experiment 7";
+        document.querySelector("h1").style.color= "black";
+        document.querySelector(".btn1").style.display = "block";
+        document.querySelector(".btn2").style.display="none";
+      }
+    </script>
+  </body>
+</html>
